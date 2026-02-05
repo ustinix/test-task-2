@@ -1,0 +1,52 @@
+@use 'variables' as v;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(v.$overlay-color, v.$overlay-color), url('/src/assets/images/bg1.webp');
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    .onkron-icon {
+      width: 930px; // Исправить
+      color: v.$black-color;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    max-width: 1850px;
+  }
+
+  .icon-card {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    &__icon {
+      min-height: 6.5rem;
+      max-height: 12rem;
+      color: v.$white-color;
+    }
+    &__text {
+      font-weight: v.$font-weight-semibold;
+      font-size: clamp(15px, 2vw, 31px);
+      font-weight: 500;
+      line-height: 1.4;
+      color: v.$white-color;
+    }
+  }
+}

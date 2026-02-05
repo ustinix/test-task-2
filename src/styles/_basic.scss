@@ -1,0 +1,85 @@
+@use 'fonts';
+@use 'variables' as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-family-base;
+  font-weight: v.$font-weight-regular;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+li {
+  list-style: none;
+}
+
+figure,
+blockquote {
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 2220px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  margin-bottom: 60px;
+  background-color: aquamarine;
+}
+
+.final-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: aquamarine;
+}
+
+.title {
+  font-weight: v.$font-weight-extrabold;
+  color: v.$black-color;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.subtitle {
+  font-weight: v.$font-weight-medium;
+  color: v.$black-color;
+  font-size: clamp(30px, 5vw, 67px);
+  line-height: 1.2;
+}
+
+.hidden {
+  display: none;
+}
