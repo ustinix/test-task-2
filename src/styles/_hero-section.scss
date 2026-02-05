@@ -2,15 +2,31 @@
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   background:
-    linear-gradient(v.$overlay-color, v.$overlay-color), url('/src/assets/images/bg1.webp');
+    linear-gradient(to top, v.$overlay-color, transparent 60%),
+    url('/src/assets/images/watermark.png'), url('/src/assets/images/bg1.webp');
+
+  background-size:
+    contain,
+    clamp(564px, 40vw, 1063px) auto,
+    cover;
+
+  background-position:
+    center,
+    right clamp(-150px, -5vw, -50px) bottom clamp(-300px, -15vh, -100px),
+    left top;
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+
   &__content {
+    padding: 10vh 5vh 12vh 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    justify-content: space-between;
+    gap: 7vw;
   }
   &__text {
     display: flex;
@@ -18,35 +34,50 @@
     gap: 1rem;
     text-align: center;
     .onkron-icon {
-      width: 930px; // Исправить
+      width: clamp(500px, 40vw, 930px);
+      height: auto;
       color: v.$black-color;
     }
   }
   &__icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
-    max-width: 1850px;
-  }
+    gap: clamp(5rem, 5vw, 30rem);
+    width: 100%;
+    justify-content: center;
 
-  .icon-card {
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-    &__icon {
-      min-height: 6.5rem;
-      max-height: 12rem;
-      color: v.$white-color;
-    }
-    &__text {
-      font-weight: v.$font-weight-semibold;
-      font-size: clamp(15px, 2vw, 31px);
-      font-weight: 500;
-      line-height: 1.4;
-      color: v.$white-color;
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: clamp(1rem, 1vw, 3rem);
+      text-align: center;
+      .icon-wrapper {
+        width: clamp(114px, 9vw, 223px);
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      &__icon {
+        width: 100%;
+        height: 100%;
+        color: v.$white-color;
+      }
+      &__text {
+        justify-self: start;
+        font-weight: v.$font-weight-semibold;
+        font-size: clamp(15px, 2vw, 31px);
+        font-weight: 500;
+        line-height: 1.4;
+        color: v.$white-color;
+        hyphens: auto;
+        word-wrap: break-word;
+        white-space: normal;
+      }
     }
   }
 }
