@@ -47,7 +47,7 @@
             </div>
             <div class="icon-card">
               <div class="icon-wrapper">
-                <svg class="icon-card__icon">
+                <svg class="icon-card__icon manipulator-icon">
                   <use href="src/assets/images/icons-sprites.svg#manipulator"></use>
                 </svg>
               </div>
@@ -65,19 +65,128 @@
         </div>
       </section>
       <section class="section tvImg">
-        <div class="container tvImg__content"></div>
+        <div class="container tvImg__content">
+          <picture class="sizes__img">
+            <source
+              media="(max-width: 830px)"
+              srcset="/src/assets/images/bg2mob.webp"
+              type="image/webp"
+            />
+            <source srcset="/src/assets/images/bg2.webp" type="image/webp" />
+
+            <img src="/src/assets/images/bg2fallback.jpg" alt="Sizes" loading="lazy" />
+          </picture>
+        </div>
       </section>
       <section class="section sizes">
-        <div class="container sizes__content"></div>
+        <div class="container sizes__content">
+          <picture class="sizes__img">
+            <source
+              media="(max-width: 830px)"
+              srcset="/src/assets/images/bg3mob.webp"
+              type="image/webp"
+            />
+            <source srcset="/src/assets/images/bg3.webp" type="image/webp" />
+
+            <img src="/src/assets/images/bg3fallback.jpg" alt="Sizes" loading="lazy" />
+          </picture>
+        </div>
       </section>
       <section class="section features">
-        <div class="container features__content"></div>
+        <div class="container features__content">
+          <picture class="features__img">
+            <source
+              media="(max-width: 830px)"
+              srcset="/src/assets/images/bg4mob.webp"
+              type="image/webp"
+            />
+            <source srcset="/src/assets/images/bg4.webp" type="image/webp" />
+
+            <img src="/src/assets/images/bg4fallback.jpg" alt="features image" loading="lazy" />
+          </picture>
+        </div>
       </section>
       <section class="section example">
-        <div class="container example__content"></div>
+        <div class="container example__content">
+          <div class="example__left">
+            <picture class="example__img">
+              <source
+                media="(max-width: 830px)"
+                srcset="/src/assets/images/bg5-2mob.webp"
+                type="image/webp"
+              />
+              <source srcset="/src/assets/images/bg5-2.webp" type="image/webp" />
+
+              <img src="/src/assets/images/bg5-2fallback.jpg" alt="example image" loading="lazy" />
+            </picture>
+            <span class="name">Andere Marke</span>
+          </div>
+          <div class="example__right">
+            <picture class="example__img">
+              <source
+                media="(max-width: 830px)"
+                srcset="/src/assets/images/bg5-1mob.webp"
+                type="image/webp"
+              />
+              <source srcset="/src/assets/images/bg5-1.webp" type="image/webp" />
+
+              <img src="/src/assets/images/bg5-2fallback.jpg" alt="example image" loading="lazy" />
+            </picture>
+          </div>
+        </div>
       </section>
       <section class="section montage">
-        <div class="container montage__content"></div>
+        <div class="container montage__content">
+          <h2 class="montage__title">Einfache Montage</h2>
+          <div class="montage__one">
+            <picture class="montage__img">
+              <source
+                media="(max-width: 830px)"
+                srcset="/src/assets/images/bg6-1mob.webp"
+                type="image/webp"
+              />
+              <source srcset="/src/assets/images/bg6-1.webp" type="image/webp" />
+
+              <img src="/src/assets/images/bg6-1fallback.jpg" alt="montage image" loading="lazy" />
+            </picture>
+            <div class="text">
+              <h3 class="img-title">Wasserwaage</h3>
+              <p class="img-subtitle">Präzise Ausrichtung</p>
+            </div>
+          </div>
+          <div class="montage__two">
+            <picture class="montage__img">
+              <source
+                media="(max-width: 830px)"
+                srcset="/src/assets/images/bg6-2mob.webp"
+                type="image/webp"
+              />
+              <source srcset="/src/assets/images/bg6-2.webp" type="image/webp" />
+
+              <img src="/src/assets/images/bg6-2fallback.jpg" alt="montage image" loading="lazy" />
+            </picture>
+            <div class="text">
+              <h3 class="img-title">Montageschablone</h3>
+              <p class="img-subtitle">Vorbereitung und Staubschutz</p>
+            </div>
+          </div>
+          <div class="montage__three">
+            <picture class="montage__img">
+              <source
+                media="(max-width: 830px)"
+                srcset="/src/assets/images/bg6-3mob.webp"
+                type="image/webp"
+              />
+              <source srcset="/src/assets/images/bg6-3.webp" type="image/webp" />
+
+              <img src="/src/assets/images/bg6-3fallback.jpg" alt="montage image" loading="lazy" />
+            </picture>
+            <div class="text">
+              <h3 class="img-title">Befestigung</h3>
+              <p class="img-subtitle">Sichere Wandf ixierung</p>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="final-section">
         <div class="container final__content"></div>

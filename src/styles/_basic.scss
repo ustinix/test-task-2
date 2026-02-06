@@ -48,17 +48,21 @@ html {
 }
 
 .container {
-  width: 100%;
-  max-width: 2220px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .section {
+  position: relative;
   width: 100%;
-  min-height: calc(100vh - 60px);
-  margin-bottom: 60px;
+  aspect-ratio: 16 / 8;
+  height: auto;
+  margin-bottom: clamp(25px, 3vw, 65px);
   background-color: aquamarine;
+  @media (max-width: 830px) {
+    aspect-ratio: 8 / 6;
+  }
 }
 
 .final-section {
@@ -76,7 +80,7 @@ html {
 .subtitle {
   font-weight: v.$font-weight-medium;
   color: v.$black-color;
-  font-size: clamp(30px, 5vw, 67px);
+  font-size: clamp(18px, 3.5vw, 70px);
   line-height: 1.2;
 }
 
