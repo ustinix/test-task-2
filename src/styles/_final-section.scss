@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+.final {
+  container-type: inline-size;
+  .container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/src/assets/images/bg7.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__text {
+    position: absolute;
+    top: 5%;
+    left: 54%;
+    max-width: 50vw;
+    text-align: start;
+    text-overflow: clip;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    font-size: clamp(1rem, 4.5vw, 30rem);
+    font-weight: v.$font-weight-bold;
+    color: v.$white-color;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 10vw, 12.5rem);
+    font-weight: v.$font-weight-bold;
+    color: v.$white-color;
+    line-height: 0.95;
+    letter-spacing: 2px;
+  }
+  @container (max-width: 1024px) {
+    &__text {
+      top: 7%;
+      max-width: 50vw;
+    }
+  }
+}

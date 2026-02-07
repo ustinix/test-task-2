@@ -80,7 +80,8 @@
         transform: translateX(20%);
       }
       &__text {
-        max-width: 200px;
+        min-width: 0;
+        max-width: 60vw;
         justify-self: start;
         font-weight: v.$font-weight-semibold;
         font-size: clamp(15px, 1vw, 31px);

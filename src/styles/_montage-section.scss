@@ -1,37 +1,25 @@
 @use 'variables' as v;
 
 .montage {
-  position: relative;
+  container-type: inline-size;
   .container {
     padding: 0;
     height: 100%;
     width: 100%;
-    container-type: inline-size;
-    container-name: montage-container;
   }
   &__content {
     display: grid;
-    grid-template-areas:
-      'one two three'
-      'one two three';
+    grid-template-areas: 'one two three';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr;
     gap: 1rem;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        linear-gradient(to bottom, v.$overlay-color, transparent 60%),
-        linear-gradient(to top, v.$overlay-color, transparent 60%);
-      pointer-events: none;
-      z-index: 1;
-    }
+    height: 100%;
+    background:
+      linear-gradient(to bottom, v.$overlay-color, transparent 30%),
+      linear-gradient(to top, v.$overlay-color, transparent 30%);
   }
   &__title {
+    max-width: 95vw;
     width: 100%;
     position: absolute;
     top: 3%;
@@ -43,20 +31,38 @@
     font-weight: v.$font-weight-bold;
     font-size: clamp(5rem, 1vw, 11rem);
     letter-spacing: 1px;
+    text-overflow: clip;
+    overflow: hidden;
   }
-  &__one {
+  &__one,
+  &__two,
+  &__three {
     position: relative;
+    min-height: 0;
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  &__one {
     grid-area: one;
   }
   &__two {
-    position: relative;
     grid-area: two;
   }
   &__three {
-    position: relative;
     grid-area: three;
   }
   .text {
+    max-width: 45vw;
     position: absolute;
     left: 50%;
     bottom: 5%;
@@ -64,6 +70,8 @@
     color: v.$white-color;
     text-align: center;
     z-index: 10;
+    text-overflow: clip;
+    overflow: hidden;
     .img-title {
       font-weight: v.$font-weight-bold;
       font-size: clamp(1.5rem, 1vw, 4.5rem);
@@ -87,30 +95,62 @@
       display: block;
     }
   }
-  @container montage-container (max-width: 1024px) {
-    .montage__content {
+  @container (max-width: 1024px) {
+    &__content {
       gap: 0.8rem;
       grid-template-areas:
         'one three'
         'two three';
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
+      background: linear-gradient(to top, v.$overlay-color, transparent 30%);
     }
 
-    .montage__title {
-      top: 2%;
-      font-size: clamp(4rem, 8cqi, 8rem);
+    &__title {
+      letter-spacing: 2px;
+      position: absolute;
+      top: auto;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: clamp(2rem, 9vw, 8rem);
     }
 
-    .montage .text {
-      bottom: 3%;
+    &__one,
+    &__two,
+    &__three {
+      background: linear-gradient(to bottom, v.$overlay-color, transparent 30%);
+    }
+
+    &__one .text,
+    &__two .text {
+      text-align: start;
+      left: 6%;
+      bottom: auto;
+      top: 6%;
+      transform: translateX(0%);
 
       .img-title {
-        font-size: clamp(1.2rem, 3cqi, 3rem);
+        font-size: clamp(0.5rem, 4vw, 10rem);
       }
 
       .img-subtitle {
-        font-size: clamp(0.7rem, 1.5cqi, 1.5rem);
+        display: none;
+      }
+    }
+    &__three .text {
+      text-align: start;
+      left: 6%;
+      bottom: auto;
+      top: 3%;
+      transform: translateX(0%);
+
+      .img-title {
+        font-size: clamp(0.5rem, 4vw, 10rem);
+      }
+
+      .img-subtitle {
+        display: none;
       }
     }
   }
