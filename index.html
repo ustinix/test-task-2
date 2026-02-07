@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
@@ -11,16 +11,19 @@
   </head>
   <body>
     <main>
-      <section class="section hero">
+      <section
+        class="section hero"
+        aria-label="ONKRON Hauptseite - Intelligente Lösungen für den Alltag"
+      >
         <div class="container hero__content">
           <div class="hero__text">
-            <h1 class="title">
+            <h1 class="hero__title">
               <svg class="onkron-icon" aria-hidden="true">
                 <use href="src/assets/images/icons-sprites.svg#onkron"></use>
               </svg>
               <span class="hidden" aria-hidden="false">ONKRON</span>
             </h1>
-            <h2 class="subtitle">intelligente Lösungen für den Alltag</h2>
+            <h2 class="hero__subtitle">intelligente Lösungen für den Alltag</h2>
           </div>
           <div class="hero__icons">
             <a href="#" class="icon-card">
@@ -66,9 +69,9 @@
           </div>
         </div>
       </section>
-      <section class="section tvImg">
+      <section class="section tvImg" aria-label="TV-Wandhalterung Beispiel">
         <div class="container tvImg__content">
-          <picture class="sizes__img">
+          <picture class="sizes__img" title="TV-Wandhalterung Montagebeispiel">
             <source
               media="(max-width: 830px)"
               srcset="/src/assets/images/bg2mob.webp"
@@ -76,13 +79,20 @@
             />
             <source srcset="/src/assets/images/bg2.webp" type="image/webp" />
 
-            <img src="/src/assets/images/bg2fallback.jpg" alt="Sizes" loading="lazy" />
+            <img
+              src="/src/assets/images/bg2fallback.jpg"
+              alt="TV-Wandhalterung montiert an der Wand mit einem 55 Zoll Fernseher"
+              loading="lazy"
+            />
           </picture>
         </div>
       </section>
-      <section class="section sizes">
+      <section
+        class="section sizes"
+        aria-label="ONKRON TV-Halterung Spezifikationen - Maße, Gewicht und Tragfähigkeit im Detail"
+      >
         <div class="container sizes__content">
-          <picture class="sizes__img">
+          <picture class="sizes__img" title="ONKRON TV-Halterung Dimensionen">
             <source
               media="(max-width: 830px)"
               srcset="/src/assets/images/bg3mob.webp"
@@ -90,13 +100,20 @@
             />
             <source srcset="/src/assets/images/bg3.webp" type="image/webp" />
 
-            <img src="/src/assets/images/bg3fallback.jpg" alt="Sizes" loading="lazy" />
+            <img
+              src="/src/assets/images/bg3fallback.jpg"
+              alt="ONKRON TV-Halterung Dimensionen: VESA 2000x200, 600х400, maximale Belastung 50kg"
+              loading="lazy"
+            />
           </picture>
         </div>
       </section>
-      <section class="section features">
+      <section
+        class="section features"
+        aria-label="ONKRON TV-Halterung Funktionen und Besonderheiten"
+      >
         <div class="container features__content">
-          <picture class="features__img">
+          <picture class="features__img" title="ONKRON Kabelmanagement System für TV-Halterungen">
             <source
               media="(max-width: 830px)"
               srcset="/src/assets/images/bg4mob.webp"
@@ -104,11 +121,26 @@
             />
             <source srcset="/src/assets/images/bg4.webp" type="image/webp" />
 
-            <img src="/src/assets/images/bg4fallback.jpg" alt="features image" loading="lazy" />
+            <img
+              src="/src/assets/images/bg4fallback.jpg"
+              alt="ONKRON TV-Halterung mit integriertem Kabelmanagement: Ordentliche Verkabelung, versteckte Kabelführung, kein Kabelsalat"
+              loading="lazy"
+            />
           </picture>
         </div>
+        <a
+          href="#"
+          class="features__link"
+          aria-label="Weitere Informationen zu Funktionen"
+          title="To kabel management system"
+        >
+          <span class="visually-hidden">Zum Funktionsabschnitt wechseln</span>
+        </a>
       </section>
-      <section class="section example">
+      <section
+        class="section example"
+        aria-label="ONKRON TV-Halterung im Vergleich zu anderen Marken"
+      >
         <div class="container example__content">
           <div class="example__left">
             <picture class="example__img">
@@ -119,7 +151,11 @@
               />
               <source srcset="/src/assets/images/bg5-2.webp" type="image/webp" />
 
-              <img src="/src/assets/images/bg5-2fallback.jpg" alt="example image" loading="lazy" />
+              <img
+                src="/src/assets/images/bg5-2fallback.jpg"
+                alt="TV-Halterung einer anderen Marke: Einfache Konstruktion, weniger Funktionen, Standard-Kabelmanagement"
+                loading="lazy"
+              />
             </picture>
             <span class="name">Andere Marke</span>
           </div>
@@ -132,12 +168,19 @@
               />
               <source srcset="/src/assets/images/bg5-1.webp" type="image/webp" />
 
-              <img src="/src/assets/images/bg5-2fallback.jpg" alt="example image" loading="lazy" />
+              <img
+                src="/src/assets/images/bg5-2fallback.jpg"
+                alt="ONKRON Premium TV-Halterung: Integriertes Kabelmanagement, verstellbare Neigung, robuste Konstruktion, schlankes Design"
+                loading="lazy"
+              />
             </picture>
           </div>
         </div>
       </section>
-      <section class="section montage">
+      <section
+        class="section montage"
+        aria-label="ONKRON TV-Halterung Montageanleitung in 3 einfachen Schritten"
+      >
         <div class="container montage__content">
           <h2 class="montage__title">Einfache Montage</h2>
           <div class="montage__one">
@@ -202,7 +245,10 @@
           </div>
         </div>
       </section>
-      <section class="section final">
+      <section
+        class="section final"
+        aria-label="ONKRON TV-Halterung - Jetzt Ihre Traumhalterung finden und bestellen"
+      >
         <div class="container final__content">
           <div class="final__text">
             <h3 class="final__subtitle">Ihre <br />Traumhalterung</h3>

@@ -21,13 +21,24 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   container-type: inline-size;
 
+  &__title {
+    font-weight: v.$font-weight-extrabold;
+    color: v.$black-color;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+  }
+  &__subtitle {
+    font-weight: v.$font-weight-medium;
+    color: v.$black-color;
+    font-size: clamp(18px, 3.5vw, 70px);
+    line-height: 1.2;
+    margin-bottom: clamp(9vh, 16vh, 20vh);
+  }
   &__content {
-    padding: clamp(7vw, 4vw, 12vw) clamp(1vw, 3vw, 5vw) clamp(5vw, 7vw, 10vw) clamp(1vw, 3vw, 5vw);
+    padding: clamp(10vw, 4vw, 12vw) clamp(1vw, 3vw, 5vw) clamp(5vw, 7vw, 10vw) clamp(1vw, 3vw, 5vw);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: clamp(9vh, 11vh, 15vh);
   }
   &__text {
     max-width: 95%;
@@ -60,6 +71,8 @@
       align-items: center;
       gap: clamp(0rem, 0vw, 3rem);
       text-align: center;
+      color: v.$white-color;
+      transition: color 0.3s ease;
       .icon-wrapper {
         width: clamp(120px, 10vw, 200px);
         aspect-ratio: 1/1;
@@ -72,7 +85,7 @@
       &__icon {
         width: 100%;
         height: 100%;
-        color: v.$white-color;
+        color: currentColor;
         aspect-ratio: 2/1;
         object-fit: contain;
       }
@@ -87,9 +100,16 @@
         font-size: clamp(15px, 1vw, 31px);
         font-weight: 500;
         line-height: 1.4;
-        color: v.$white-color;
+        color: currentColor;
         text-overflow: clip;
         overflow: hidden;
+      }
+
+      &:visited {
+        color: v.$black-color;
+      }
+      &:hover {
+        color: v.$black-color;
       }
     }
   }
@@ -115,6 +135,9 @@
     }
   }
   @container (max-width: 850px) {
+    &__subtitle {
+      margin-bottom: clamp(10vh, 10vh, 20vh);
+    }
     &__text {
       margin-bottom: 100px;
     }
