@@ -40,7 +40,7 @@
     overflow: hidden;
     .onkron-icon {
       width: clamp(300px, 65vw, 1100px);
-      aspect-ratio: 16 / 2;
+      aspect-ratio: 8 / 1;
       color: v.$black-color;
       object-fit: contain;
     }
