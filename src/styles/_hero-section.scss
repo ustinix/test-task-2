@@ -108,8 +108,10 @@
       &:visited {
         color: v.$black-color;
       }
-      &:hover {
-        color: v.$black-color;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: v.$black-color;
+        }
       }
     }
   }
